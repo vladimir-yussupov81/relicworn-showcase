@@ -1,0 +1,10 @@
+# GitHub Linguist treats any path matching ^[Ee]xamples?/ as documentation and
+# leaves it out of the repository's language statistics. The TypeScript in this
+# directory is real, tested source code — 738 lines with 24 passing tests — so
+# without this override the repository reports no code at all.
+examples/**          linguist-documentation=false
+examples/src/**      linguist-detectable=true
+examples/test/**     linguist-detectable=true
+
+# Written by npm, not by hand: real, but it should not count as authored code.
+examples/package-lock.json linguist-generated=true
